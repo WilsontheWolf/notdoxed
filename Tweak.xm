@@ -30,7 +30,7 @@
 - (UILabel *)textLabel
 {
     UILabel *o = %orig;
-    [o setText:@"    "];
+    [o setText:@"iCloud"];
     return o;
 }
 %end

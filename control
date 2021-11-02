@@ -1,0 +1,11 @@
+Package: me.krit.notdoxed
+Name: NotDoxed
+Version: 1.1
+Architecture: iphoneos-arm
+Description: Hide personal info in common apps.
+Maintainer: WilsontheWolf
+Author: krit
+Section: Tweaks
+Depends: mobilesubstrate (>= 0.9.5000)
+Depiction: https://wilsonthewolf.github.io/repo/depictions/web/me.krit.notdoxed
+SileoDepiction: https://wilsonthewolf.github.io/repo/depictions/sileo/me.krit.notdoxed

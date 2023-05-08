@@ -1,14 +1,4 @@
-@import Foundation;
-@import UIKit;
-#include <os/log.h>
-#include <libgen.h>
-#include <string.h>
-
-#include <dlfcn.h>
-
-#include <objc/runtime.h>
-#include <crt_externs.h>
-#define kProcessName (*(char ***)_NSGetArgv())[0]
+#include <UIKit/UIKit.h>
 
 @interface City : NSObject 
 -(BOOL)isLocalWeatherCity;
@@ -16,19 +6,14 @@
 
 %hook City
 
--(NSString *)name
-{
-    //if ( strstr(kProcessName, "WeatherWidget") != NULL )
-        return @"Weather"; 
-
-    return %orig;
+-(NSString *)name {
+    return @"Weather"; 
 }
 
 %end
 
 %hook PSUIAppleAccountCell
-- (UILabel *)textLabel
-{
+- (UILabel *)textLabel {
     UILabel *o = %orig;
     [o setText:@"iCloud"];
     return o;
